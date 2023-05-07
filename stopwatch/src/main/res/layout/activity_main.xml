@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="100dp">
+        <TextView
+            android:id="@+id/secTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="60dp"
+            android:text="0"/>
+        <TextView
+            android:id="@+id/milisecTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/secTextView"
+            android:layout_alignBaseline="@id/secTextView"
+            android:textSize="16dp"
+            android:text="00"/>
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="8.dp">
+        <LinearLayout
+            android:id="@+id/lapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/resetFab"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_refresh_24"
+            android:backgroundTint="@color/red"
+            android:tint="@color/white"
+            android:layout_marginRight="70dp"
+            android:contentDescription="reset" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/startFab"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_play_arrow_24"
+            android:backgroundTint="@color/green"
+            android:tint="@color/white"
+            android:layout_marginRight="70dp"
+            android:contentDescription="start/stop" />
+
+        <Button
+            android:id="@+id/lapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey"
+            android:text="랩 타임"
+            android:textColor="@color/black"
+            android:contentDescription="lab" />
+
+    </LinearLayout>
+</RelativeLayout>

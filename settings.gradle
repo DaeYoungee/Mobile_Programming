@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Mobile Programing"
+include ':app'
+include ':chapter7'
+include ':calculate'
+include ':chapter8'
+include ':stopwatch'
+include ':project10_2'
+include ':bmi_calculate'
